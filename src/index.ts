@@ -5,27 +5,27 @@ import { defaultConfig } from './defaultConfig';
 type Config = Record<string, Array<string | number>>;
 
 let cssContent = ':root {\n';
-let tsContent = 'export const varbbq = {\n';
+let tsContent = 'export const varbq = {\n';
 
 export const generateTheme = () => {
   cssContent = ':root {\n';
-  tsContent = 'export const varbbq = {\n';
+  tsContent = 'export const varbq = {\n';
 
   try {
-    const configPath = path.join(process.cwd(), 'varbbq.json');
-    const cssFilePath = path.join(process.cwd(), 'varbbq', 'theme.css');
-    const tsFilePath = path.join(process.cwd(), 'varbbq', 'theme.ts');
+    const configPath = path.join(process.cwd(), 'varbq.json');
+    const cssFilePath = path.join(process.cwd(), 'varbq', 'theme.css');
+    const tsFilePath = path.join(process.cwd(), 'varbq', 'theme.ts');
 
     let config: Config;
 
     if (fs.existsSync(configPath)) {
-      console.log('varbbq.json already exists, reading configuration.');
+      console.log('varbq.json already exists, reading configuration.');
       const rawdata = fs.readFileSync(configPath, 'utf-8');
       config = JSON.parse(rawdata);
     } else {
-      // Write default configuration to varbbq.json
+      // Write default configuration to varbq.json
       fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2));
-      console.log('varbbq.json created with default configuration.');
+      console.log('varbq.json created with default configuration.');
       config = defaultConfig;
     }
 
@@ -57,7 +57,7 @@ function loopKeys(obj: Config) {
 generateTheme();
 
 export function watchTheme() {
-  const configPath = path.join(process.cwd(), 'varbbq.json');
+  const configPath = path.join(process.cwd(), 'varbq.json');
   fs.watch(configPath, (eventType, filename) => {
     if (eventType === 'change') {
       generateTheme();

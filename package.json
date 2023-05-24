@@ -1,10 +1,10 @@
 {
-  "name": "varbbq",
+  "name": "varbq",
   "version": "1.0.4",
   "description": "Generate CSS and JS variables from a JSON file",
   "main": "dist/index.js",
   "bin": {
-    "varbbq": "./cli.js"
+    "varbq": "./cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -31,6 +31,6 @@
   },
   "files": [
     "dist",
-    "varbbq"
+    "varbq"
   ]
 }
