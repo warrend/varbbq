@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+/.pnp/
+.pnp.js
+
+# Testing directories
+/coverage/
+/.nyc_output/
+/.jest/
+
+# Build output
+/dist/
+
+# Environment variables
+.env
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
