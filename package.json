@@ -1,7 +1,7 @@
 {
   "name": "varbbq",
   "version": "1.0.3",
-  "description": "Generate CSS and TS variables from a JSON file",
+  "description": "Generate CSS and JS variables from a JSON file",
   "main": "dist/index.js",
   "bin": {
     "varbbq": "./cli.js"
