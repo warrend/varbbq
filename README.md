@@ -27,9 +27,9 @@ Watches for changes in the theme configuration file (varbbq.json) and automatica
 This command will start watching the varbbq.json file and regenerate the CSS and TypeScript files whenever it changes.
 Configuration
 
-The varbbq.json file contains the theme configuration. The key names can be whatever you want as long as nothing is nested.
+The varbbq.json file contains the theme configuration. The key names can be whatever you want as long as nothing is nested and each key name contains an array of values.
 
-````json
+```json
 {
   "primary": ["hsl(216, 99%, 98%)", "hsl(216, 98%, 92%)", "hsl(216, 95%, 86%)"],
   "secondary": ["hsl(40, 99%, 98%)", "hsl(40, 98%, 92%)", "hsl(40, 95%, 86%)"],
@@ -38,14 +38,14 @@ The varbbq.json file contains the theme configuration. The key names can be what
 }
 ```
 
-You can modify the colors, typography, and spacing variables (or whatever else you want) to customize the generated CSS and TypeScript files. Each array gets converted into the key name plus adds 100 onto each successive item in the array. For example, the primary key becomes:
+Modify the colors, typography, and spacing variables (or whatever else you want) to customize the generated CSS and TypeScript files. Each array gets converted into the key name plus adds 100 onto each successive item in the array. For example, the primary key becomes:
 
 ```css
 :root {
   --primary100: hsl(216, 99%, 98%);
   --primary200: hsl(216, 98%, 92%);
   --primary300: hsl(216, 95%, 86%);
-  ...
+  ...;
 }
 ```
 
@@ -85,4 +85,3 @@ You can modify it to include npx varbbq watch:
 Now, when you run npm run dev, it will start your development server and concurrently run npx varbbq watch to regenerate the CSS and TypeScript files whenever a change is detected in the varbbq.json file.
 
 Remember to adjust the script configuration based on your project setup. And don't forget to import the variable files where needed.
-````
