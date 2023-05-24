@@ -1,6 +1,6 @@
 {
   "name": "varbbq",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate CSS and TS variables from a JSON file",
   "main": "dist/index.js",
   "bin": {
