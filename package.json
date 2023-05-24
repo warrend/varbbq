@@ -10,7 +10,17 @@
     "build": "tsc",
     "start": "node dist/index.js"
   },
-  "author": "",
+  "keywords": [
+    "json",
+    "css",
+    "typescript",
+    "variables",
+    "theme",
+    "node",
+    "frontend",
+    "css-variables"
+  ],
+  "author": "Daniel Warren",
   "license": "ISC",
   "dependencies": {
     "yargs": "^17.7.2"
