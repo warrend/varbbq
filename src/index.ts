@@ -3,11 +3,12 @@ import path from 'path';
 import { defaultConfig } from './defaultConfig';
 
 type Config = Record<string, Array<string | number>>;
+type Options = { js: boolean; css: boolean };
 
 let cssContent = ':root {\n';
 let tsContent = 'export const varbq = {\n';
 
-export const generateTheme = () => {
+export const generateTheme = (options: Options) => {
   cssContent = ':root {\n';
   tsContent = 'export const varbq = {\n';
 
@@ -34,12 +35,26 @@ export const generateTheme = () => {
     cssContent += '}\n';
     tsContent += '}\n';
 
-    fs.mkdirSync(path.dirname(cssFilePath), { recursive: true });
-    fs.mkdirSync(path.dirname(tsFilePath), { recursive: true });
-    fs.writeFileSync(cssFilePath, cssContent);
-    fs.writeFileSync(tsFilePath, tsContent);
+    if (options.css) {
+      fs.mkdirSync(path.dirname(cssFilePath), { recursive: true });
+      fs.writeFileSync(cssFilePath, cssContent);
+      console.log('\x1b[32m%s\x1b[0m', 'CSS file generated.');
+    }
 
-    console.log('\x1b[32m%s\x1b[0m', 'CSS and TS files generated.');
+    if (options.js) {
+      fs.mkdirSync(path.dirname(tsFilePath), { recursive: true });
+      fs.writeFileSync(tsFilePath, tsContent);
+      console.log('\x1b[32m%s\x1b[0m', 'TS file generated.');
+    }
+    if (!options.js && !options.css) {
+      fs.mkdirSync(path.dirname(cssFilePath), { recursive: true });
+      fs.writeFileSync(cssFilePath, cssContent);
+      fs.mkdirSync(path.dirname(tsFilePath), { recursive: true });
+      fs.writeFileSync(tsFilePath, tsContent);
+      console.log('\x1b[32m%s\x1b[0m', 'CSS and TS files generated.');
+    }
+
+    console.log('\x1b[32m%s\x1b[0m', 'Generation complete!');
   } catch (error) {
     console.error('Error generating theme:', error);
   }
@@ -54,13 +69,11 @@ function loopKeys(obj: Config) {
   }
 }
 
-generateTheme();
-
-export function watchTheme() {
+export function watchTheme(options: Options) {
   const configPath = path.join(process.cwd(), 'varbq.json');
   fs.watch(configPath, (eventType, filename) => {
     if (eventType === 'change') {
-      generateTheme();
+      generateTheme(options);
     }
   });
 }
