@@ -30,9 +30,9 @@ This command will start watching the varbq.json file and regenerate the CSS and 
 
 You can also pass in the following flags:
 
-`--js` will only generate the ts file.
+`--js` will only generate the ts file. For example: `npx varbq watch --js`.
 
-`--css` will only generate the css file.
+`--css` will only generate the css file. For example: `npx varbq build --css`.
 
 If no flags are passed, both files will be created by default.
 
