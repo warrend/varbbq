@@ -25,7 +25,18 @@ Watches for changes in the theme configuration file (varbq.json) and automatical
 `npx varbq watch`
 
 This command will start watching the varbq.json file and regenerate the CSS and TypeScript files whenever it changes.
-Configuration
+
+## Args
+
+You can also pass in the following flags:
+
+`--js` will only generate the ts file.
+
+`--css` will only generate the css file.
+
+If no flags are passed, both files will be created by default.
+
+## Configuration
 
 The varbq.json file contains the theme configuration. The key names can be whatever you want as long as nothing is nested and each key name contains an array of values.
 
