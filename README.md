@@ -1,4 +1,11 @@
-# varbq
+<div>
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
+    <img src="./images/logo.png" alt="varbq logo" width="auto" height="165px">
+    <div style="font-size: 48px;">varbq</div>
+  </div>
+</div>
+
+<hr />
 
 varbq is a package that helps you generate CSS and TypeScript variable files based on a theme configuration.
 
