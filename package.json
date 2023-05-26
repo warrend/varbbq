@@ -1,6 +1,6 @@
 {
   "name": "varbq",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Generate CSS and JS variables from a JSON file",
   "main": "dist/index.js",
   "bin": {
