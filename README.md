@@ -1,6 +1,6 @@
 <div>
-  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center">
-    <img src="./images/logo.png" alt="varbq logo" width="auto" height="165px">
+  <div align="center">
+    <img src="https://github.com/warrend/varbq/blob/develop/images/logo.png?raw=true" alt="varbq logo" width="auto" height="165px">
     <div style="font-size: 48px;">varbq</div>
   </div>
 </div>
