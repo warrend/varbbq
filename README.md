@@ -15,9 +15,9 @@ To install varbq, use npm or yarn:
 
 `npm install varbq`
 
-## Usage
+Next run `npx varbq build`. This will build the `varbq.json` file (if it doesn't yet exist).
 
-Once installed, you can use the following commands:
+## Usage
 
 `npx varbq build`
 
@@ -27,7 +27,7 @@ This command will also create the varbq.json file with default configuration (if
 
 ## varbq watch
 
-Watches for changes in the theme configuration file (varbq.json) and automatically rebuilds the CSS and TypeScript files whenever a change is detected.
+Watches for changes in the theme configuration file (varbq.json) and automatically rebuilds the CSS and TypeScript files whenever a change is detected. Watch will not work without a varbq.json file.
 
 `npx varbq watch`
 

@@ -71,6 +71,13 @@ function loopKeys(obj: Config) {
 
 export function watchTheme(options: Options) {
   const configPath = path.join(process.cwd(), 'varbq.json');
+
+  if (!fs.existsSync(configPath)) {
+    console.error(
+      'You do not have a varbq.json file. Please create one or run npx varbq build to get started.'
+    );
+    return;
+  }
   fs.watch(configPath, (eventType, filename) => {
     if (eventType === 'change') {
       generateTheme(options);
