@@ -1,7 +1,7 @@
 <div>
   <div align="center">
     <img src="https://github.com/warrend/varbq/blob/develop/images/logo.png?raw=true" alt="varbq logo" width="auto" height="165px">
-    <div style="font-size: 48px;">varbq</div>
+    <h1>varbq</h1>
   </div>
 </div>
 
