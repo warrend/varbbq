@@ -13,7 +13,7 @@ varbq is a package that helps you generate CSS and TypeScript variable files bas
 
 To install varbq, use npm or yarn:
 
-`npm install varbq`
+`npm install --save-dev varbq`
 
 Next run `npx varbq build`. This will build the `varbq.json` file (if it doesn't yet exist).
 
