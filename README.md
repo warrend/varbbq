@@ -5,8 +5,6 @@
   </div>
 </div>
 
-<hr />
-
 varbq is a package that helps you generate CSS and TypeScript variable files based on a theme configuration.
 
 ## Installation
