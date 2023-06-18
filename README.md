@@ -1,6 +1,6 @@
 <div>
   <div align="center">
-    <img src="https://github.com/warrend/varbq/blob/develop/images/logo.png?raw=true" alt="varbq logo" width="auto" height="165px">
+    <img src="https://github.com/warrend/varbq/blob/logo/images/logo.png?raw=true" alt="varbq logo" width="auto" height="165px">
     <h1>varbq</h1>
   </div>
 </div>

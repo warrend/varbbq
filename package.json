@@ -36,7 +36,6 @@
   },
   "files": [
     "dist",
-    "varbq",
-    "images/logo.png"
+    "varbq"
   ]
 }
